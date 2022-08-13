@@ -26,7 +26,7 @@ RegisterCommand("spawnrandomcar", function()
 	local veh = vehicles[math.random(1, #vehicles)]
 	RequestModel(veh)
 	repeat Wait(0) until HasModelLoaded(veh)
-	local veh = CreateVehicle(veh, GetEntityCoords(PlayerPedId()), GetEntityHeading(PlayerPedId(), true, false)
+	local veh = CreateVehicle(veh, GetEntityCoords(PlayerPedId()), GetEntityHeading(PlayerPedId()), true, false)
 	SetPedIntoVehicle(PlayerPedId(), veh, -1)
 end)
 ```
